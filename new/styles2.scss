@@ -4,6 +4,7 @@
     box-sizing: border-box;
   }
   
+  
   nav{
       position: relative;
       display: flex;
@@ -129,9 +130,87 @@
     background-size: auto;
     background-image: url("/img/image-de-presentation.bmp");
     background-attachment: fixed;
+    height: 573px ;
     
 
     .banner-milieu{
-        padding: 4rem ;
+        padding: 5rem;
+       .goal{
+       
+        background-color: rgba(165, 147, 99, 0.7);
+        padding: 40px 40px 40px 40px;
+
+        h2{
+            text-align: center;
+            font-size: 22px;
+        }
+
+        p{
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 15px;
+        }
+        a{
+            color: white;
+            display: flex;
+            justify-content: center;
+            margin-top: 1REM;
+        }
+       }
+
+       
+    }
+  }
+
+  .bloc4{
+    color: white;
+    background: repeating-linear-gradient(
+    to bottom,
+    white,
+    white 5px,
+    lightgrey 5px,
+    lightgrey 6px
+    );
+
+    h2{
+        color:  black ;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem;
+        font-size: 25px;
+    }
+
+    .caroussel{
+        
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        padding-bottom: 6rem;
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           color: black;
+           width: 270px;
+           margin: 1rem;
+           
+            h3{
+                margin-top: 1rem;
+                text-align: center;
+            }
+            p{
+                margin-top: 1rem;
+                text-align: center;
+            }
+            img{
+                object-fit: cover;
+                height: 270px;
+                width: 270px;
+            }
+            
+        }
     }
   }
