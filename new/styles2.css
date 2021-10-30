@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  margin: 0rem 1rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.bloc1 {
+  position: relative;
+  background-size: auto;
+  background-image: url("/img/la-chouette-agence-banniere.jpg");
+  background-attachment: fixed;
+}
+
+.bloc1 .banner-haut {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bloc1 .banner-haut .logo {
+  margin: 5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bloc1 .banner-haut .logo h2 {
+  font-size: 30px;
+  color: #f3976c;
+}
+
+.bloc1 .banner-haut .logo a {
+  text-decoration: none;
+  background: #f3976c;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 1em;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.bloc2 {
+  position: relative;
+  background: white;
+  background-size: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2rem;
+}
+
+.bloc2 h1 {
+  margin: 2rem 5rem;
+  text-align: center;
+}
+
+.bloc2 .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 1rem;
+}
+
+.bloc2 .text .text1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0rem 1rem;
+}
+
+.bloc2 .text .text1 h2 {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.bloc2 .text .text1 p {
+  text-align: center;
+  margin-top: 1rem;
+  color: gray;
+}
+
+.bloc2 .review {
+  margin: 2rem 0rem;
+  text-align: center;
+}
+
+.bloc2 .review p {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bloc2 .review .ref {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.bloc3 {
+  position: relative;
+  background-size: auto;
+  background-image: url("/img/image-de-presentation.bmp");
+  background-attachment: fixed;
+}
+
+.bloc3 .banner-milieu {
+  padding: 4rem;
+}
+/*# sourceMappingURL=styles2.css.map */
