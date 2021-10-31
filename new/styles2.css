@@ -364,7 +364,7 @@ footer .resaux ul {
 }
 
 footer .resaux ul span {
-  color: white;
+  color: rgb(255, 255, 255, .6);
 }
 
 footer .resaux ul span:hover {
