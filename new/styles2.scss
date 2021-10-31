@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  @font-face {
+    font-family: et-line;
+    src: url(../fonts/et-line.eot);
+    src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'), url(../fonts/et-line.woff) format('woff'), url(../fonts/et-line.ttf) format('truetype'), url(../fonts/et-line.svg#et-line) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
   
  body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -51,20 +59,24 @@
             align-items: center;
             flex-direction: column;
 
+
             h2{
-                font-size: 30px;
+                font-size: 35px;
+                font-weight: 400;
                 color: #f3976c;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
             }
 
             a{
                 text-decoration: none;
                 background: #f3976c;
-                color: white;
-                font-size: 20px;
-                font-weight: bold;
+                color: #303030;
+                font-size: 16px;
+                font-weight: 700;
                 text-transform: uppercase;
-                border-radius: 1em;
-                padding: 0.5rem 1rem;
+                border-radius: 40px;
+                padding: 12px 28px 12px 28px;
+                box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
                 margin-top: 1rem;
             }
         }
@@ -83,6 +95,8 @@
       h1{
           margin: 2rem 5rem;
           text-align: center;
+          font-weight: 400;
+          color: #575757;
       }
       .text{
           display: flex;
@@ -96,6 +110,29 @@
               align-items: center;
               margin: 0rem 1rem;
 
+              .et-icon-presentation,
+              .et-icon-browser,
+              .et-icon-edit
+              {
+                font-family: et-line;
+                font-size: 60px;
+                color: #364577;
+                border-color: #364577;
+               
+              }
+              .et-icon-presentation::before{
+                content: "\e00e";
+                
+              }
+              .et-icon-browser::before{
+                content: "\e00c";
+                
+              }
+              .et-icon-edit::before{
+                content: "\e01c";
+                
+              }
+
               h2{
                   font-size: 20px;
                   margin-top: 1rem;
@@ -103,7 +140,7 @@
               p{
                   text-align: center;
                   margin-top: 1rem;
-                  color: gray;
+                  color: #575757;
               }
           }
           
@@ -144,21 +181,24 @@
        .goal{
         
         width: 540px;
-        background-color: rgba(165, 147, 99, 0.7);
+        background-color: rgba(165, 147, 99, 0.8);
         padding: 40px 40px 40px 40px;
 
         h2{
             position: relative;
             text-align: center;
             font-size: 22px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+            color:white ;
         }
 
         p{
             position: relative;
             color: white;
+            text-shadow: 0 1px 2px rgb(0, 0, 0);
             margin-top: 2rem;
             text-align: center;
-            font-size: 15px;
+            font-size: 19px;
         }
         a{
             position: relative;
@@ -166,6 +206,8 @@
             display: flex;
             justify-content: center;
             margin-top: 1rem;
+            font-size: 18px;
+            
         }
        }
 
@@ -231,6 +273,7 @@
   .bloc5{
     background-image: url("img/la-chouette-agence-banniere.jpg");
 
+
     .banner-bas{
         position: relative;
         display: flex;
@@ -241,19 +284,22 @@
         h2{
             text-align: center;
             margin: 1rem;
-            font-size: 25px;
+            font-size: 30px;
             font-weight: 400;
-            color: #f3976c;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+            
         }
         a{
             text-decoration: none;
                 background: #f3976c;
-                color: white;
+                color: rgb(51, 51, 51);
                 font-size: 16px;
                 font-weight: 700;
                 text-transform: uppercase;
                 border-radius: 40px;
                 padding: 12px 28px 12px 28px;
+                box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
                 margin-top: 1rem;
         }
     }
@@ -265,7 +311,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    
+    box-sizing: border-box;
     background-size: 280px 280px;
     
 }
@@ -274,11 +320,12 @@ footer{
     position: relative;
     background: #f3976c;
     padding-bottom: 3rem;
+   
 
     h2{
         text-align: center;
         padding-top: 1rem;
-        color: white;
+        color: #383838;
         font-weight: 400;
         font-size: 13px;
 
@@ -293,12 +340,39 @@ footer{
             font-size: 25px;
             margin-top: 1rem;
             span{
-                color: rgb(255, 255, 255, .6);
+                color: rgba(255, 255, 255, 0.603);
             }
             span:hover{
-                color: rgb(255, 255, 255, 1);
+                color: rgb(255, 255, 255);
             }
         }
+    }
+    .partenaire{
+        text-align: center;
+        margin-top: 1rem;
+
+        P{
+            font-weight: 700;
+            color:#383838;
+            padding-bottom: 2rem;
+        }
+    ul{
+        display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            margin-top: 4rem;
+            margin: 0rem 2rem;
+        
+            a{
+                text-decoration: none;
+                color: #383838;
+                background: rgba(255, 255, 255, 0.39);
+                border-radius: 1rem;
+                padding: 0.5rem 1rem;
+                
+            }
+    }
     }
 
 }

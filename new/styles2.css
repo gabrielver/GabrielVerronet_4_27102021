@@ -5,6 +5,14 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: et-line;
+  src: url(../fonts/et-line.eot);
+  src: url(../fonts/et-line.eot?#iefix) format("embedded-opentype"), url(../fonts/et-line.woff) format("woff"), url(../fonts/et-line.ttf) format("truetype"), url(../fonts/et-line.svg#et-line) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -73,19 +81,23 @@ nav ul li a {
 }
 
 .bloc1 .banner-haut .logo h2 {
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: 400;
   color: #f3976c;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .bloc1 .banner-haut .logo a {
   text-decoration: none;
   background: #f3976c;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
-  border-radius: 1em;
-  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  padding: 12px 28px 12px 28px;
+  -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+          box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
   margin-top: 1rem;
 }
 
@@ -109,6 +121,8 @@ nav ul li a {
 .bloc2 h1 {
   margin: 2rem 5rem;
   text-align: center;
+  font-weight: 400;
+  color: #575757;
 }
 
 .bloc2 .text {
@@ -138,6 +152,27 @@ nav ul li a {
   margin: 0rem 1rem;
 }
 
+.bloc2 .text .text1 .et-icon-presentation,
+.bloc2 .text .text1 .et-icon-browser,
+.bloc2 .text .text1 .et-icon-edit {
+  font-family: et-line;
+  font-size: 60px;
+  color: #364577;
+  border-color: #364577;
+}
+
+.bloc2 .text .text1 .et-icon-presentation::before {
+  content: "\e00e";
+}
+
+.bloc2 .text .text1 .et-icon-browser::before {
+  content: "\e00c";
+}
+
+.bloc2 .text .text1 .et-icon-edit::before {
+  content: "\e01c";
+}
+
 .bloc2 .text .text1 h2 {
   font-size: 20px;
   margin-top: 1rem;
@@ -146,7 +181,7 @@ nav ul li a {
 .bloc2 .text .text1 p {
   text-align: center;
   margin-top: 1rem;
-  color: gray;
+  color: #575757;
 }
 
 .bloc2 .review {
@@ -187,7 +222,7 @@ nav ul li a {
 
 .bloc3 .banner-milieu .goal {
   width: 540px;
-  background-color: rgba(165, 147, 99, 0.7);
+  background-color: rgba(165, 147, 99, 0.8);
   padding: 40px 40px 40px 40px;
 }
 
@@ -195,14 +230,17 @@ nav ul li a {
   position: relative;
   text-align: center;
   font-size: 22px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 .bloc3 .banner-milieu .goal p {
   position: relative;
   color: white;
+  text-shadow: 0 1px 2px black;
   margin-top: 2rem;
   text-align: center;
-  font-size: 15px;
+  font-size: 19px;
 }
 
 .bloc3 .banner-milieu .goal a {
@@ -215,6 +253,7 @@ nav ul li a {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 1rem;
+  font-size: 18px;
 }
 
 .bloc4 {
@@ -305,20 +344,23 @@ nav ul li a {
 .bloc5 .banner-bas h2 {
   text-align: center;
   margin: 1rem;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 400;
-  color: #f3976c;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .bloc5 .banner-bas a {
   text-decoration: none;
   background: #f3976c;
-  color: white;
+  color: #333333;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 40px;
   padding: 12px 28px 12px 28px;
+  -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+          box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
   margin-top: 1rem;
 }
 
@@ -328,6 +370,8 @@ nav ul li a {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-size: 280px 280px;
 }
 
@@ -340,21 +384,22 @@ footer {
 footer h2 {
   text-align: center;
   padding-top: 1rem;
-  color: white;
+  color: #383838;
   font-weight: 400;
   font-size: 13px;
 }
 
 footer .resaux {
-  text-align: centeR;
+  text-align: center;
 }
 
 footer .resaux ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -364,10 +409,44 @@ footer .resaux ul {
 }
 
 footer .resaux ul span {
-  color: rgb(255, 255, 255, .6);
+  color: rgba(255, 255, 255, 0.603);
 }
 
 footer .resaux ul span:hover {
   color: white;
+}
+
+footer .partenaire {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+footer .partenaire P {
+  font-weight: 700;
+  color: #383838;
+  padding-bottom: 2rem;
+}
+
+footer .partenaire ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin-top: 4rem;
+  margin: 0rem 2rem;
+}
+
+footer .partenaire ul a {
+  text-decoration: none;
+  color: #383838;
+  background: rgba(255, 255, 255, 0.39);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
 }
 /*# sourceMappingURL=styles2.css.map */
