@@ -96,7 +96,10 @@
             <h2>Nous travaillons avec beaucoup de clients, <br> voici nos réalisations.</h2>
             <div class="caroussel">
                 <div class="card">
-                    <img src="img/1.jpg" alt="paris web design logo agence web meilleure agence et refonte site web journal">
+                    <a href="#">
+                        <img src="img/1.jpg" alt="paris web design logo agence web meilleure agence et refonte site web journal">
+                        <i class="fas fa-plus-circle"></i>
+                    </a>
                     <h3>REFONTE D'UN SITE WEB POUR UN JOURNAL LOCAL</h3>
                     <p>Nous avons créé une nouvelle identité visuelle pour un journal lyonnais.</p>
                 </div>
@@ -150,6 +153,31 @@
             </ul>
         </div>
     </footer>
+
+    <div id="carous">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <button type="button" class="close-lightbox" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            <div class="modal-body">
+                <a href="#" class="prev-lightbox" aria-label="prev" style="display: none;">
+                    <span class="fa fa-chevron-left"></span>
+                </a>
+                <a href="#" class="next-lightbox" aria-label="next">
+                    <span class="fa fa-chevron-right"></span>
+                </a>
+                <img id="image1" class="img-responsive" src="img/1.jpg">
+                
+                <div id="lightbox-video-container" class="embed-responsive embed-responsive-16by9" style="display: none;">
+                    <video controls="" class="embed-responsive-item">
+                        <source id="lightbox-video" src="img/1.jpg" type="video/mp4">
+                    </video>
+                    </div><p class="lightbox-caption">Refonte d'un site web pour un journal local</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

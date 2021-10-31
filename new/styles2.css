@@ -81,10 +81,12 @@ nav ul li a {
 }
 
 .bloc1 .banner-haut .logo h2 {
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 400;
   color: #f3976c;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  background: #303030a1;
+  border-radius: 2rem;
+  padding: 0.25rem 1rem;
 }
 
 .bloc1 .banner-haut .logo a {
@@ -101,6 +103,11 @@ nav ul li a {
   margin-top: 1rem;
 }
 
+.bloc1 .banner-haut .logo a:hover {
+  background: #b36e4e;
+  color: white;
+}
+
 .bloc2 {
   position: relative;
   background: white;
@@ -115,11 +122,13 @@ nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 2rem;
+  padding: 2rem;
+  -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+          box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
 }
 
 .bloc2 h1 {
-  margin: 2rem 5rem;
+  margin: 2rem 10rem;
   text-align: center;
   font-weight: 400;
   color: #575757;
@@ -135,7 +144,7 @@ nav ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem 1rem;
+  margin: 3rem 1rem;
 }
 
 .bloc2 .text .text1 {
@@ -192,7 +201,7 @@ nav ul li a {
 .bloc2 .review p {
   font-style: italic;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .bloc2 .review .ref {
@@ -222,14 +231,14 @@ nav ul li a {
 
 .bloc3 .banner-milieu .goal {
   width: 540px;
-  background-color: rgba(165, 147, 99, 0.8);
+  background-color: #85744ccb;
   padding: 40px 40px 40px 40px;
 }
 
 .bloc3 .banner-milieu .goal h2 {
   position: relative;
   text-align: center;
-  font-size: 22px;
+  font-size: 25px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   color: white;
 }
@@ -237,10 +246,13 @@ nav ul li a {
 .bloc3 .banner-milieu .goal p {
   position: relative;
   color: white;
-  text-shadow: 0 1px 2px black;
+  padding: 1rem;
   margin-top: 2rem;
   text-align: center;
-  font-size: 19px;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.267);
+  border-radius: 0.5rem;
+  font-weight: 400;
 }
 
 .bloc3 .banner-milieu .goal a {
@@ -256,10 +268,18 @@ nav ul li a {
   font-size: 18px;
 }
 
+.bloc3 .banner-milieu .goal a:hover {
+  background: #f3976cbd;
+  border-radius: 1rem;
+  color: black;
+}
+
 .bloc4 {
   position: relative;
   color: white;
   background: repeating-linear-gradient(to bottom, white, white 5px, lightgrey 5px, lightgrey 6px);
+  -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+          box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
 }
 
 .bloc4 h2 {
@@ -289,6 +309,7 @@ nav ul li a {
 }
 
 .bloc4 .caroussel .card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,6 +323,10 @@ nav ul li a {
   color: black;
   width: 270px;
   margin: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+          box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
 }
 
 .bloc4 .caroussel .card h3 {
@@ -313,6 +338,7 @@ nav ul li a {
 .bloc4 .caroussel .card p {
   margin-top: 1rem;
   text-align: center;
+  color: #575757;
 }
 
 .bloc4 .caroussel .card img {
@@ -320,6 +346,29 @@ nav ul li a {
      object-fit: cover;
   height: 270px;
   width: 270px;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.bloc4 .caroussel .card i {
+  position: absolute;
+  font-size: 50px;
+  top: 115px;
+  left: 115px;
+  color: rgba(0, 0, 0, 0.555);
+  opacity: 0;
+}
+
+.bloc4 .caroussel .card a:hover:before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.582);
+  width: 270px;
+  height: 270px;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.bloc4 .caroussel .card a:hover i {
+  opacity: 1;
 }
 
 .bloc5 {
@@ -362,6 +411,11 @@ nav ul li a {
   -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
           box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
   margin-top: 1rem;
+}
+
+.bloc5 .banner-bas a:hover {
+  background: #b36e4e;
+  color: white;
 }
 
 .banner::before {
@@ -448,5 +502,96 @@ footer .partenaire ul a {
   background: rgba(255, 255, 255, 0.39);
   border-radius: 1rem;
   padding: 0.5rem 1rem;
+}
+
+#carous {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#carous .modal-dialog {
+  position: relative;
+}
+
+#carous .modal-dialog .modal-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+}
+
+#carous .modal-dialog .modal-content .close-lightbox {
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  line-height: 30px;
+  padding: 0 9px 5px;
+  opacity: 0.3;
+}
+
+#carous .modal-dialog .modal-content button {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+#carous .modal-dialog .modal-content .close-lightbox:hover {
+  opacity: 1.0;
+  color: #FFF;
+}
+
+#carous .modal-dialog .modal-content .modal-body {
+  position: relative;
+  padding: 1rem;
+}
+
+#carous .modal-dialog .modal-content .modal-body img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 340px;
+  height: 340px;
+}
+
+#carous .modal-dialog .modal-content .modal-body img #img2 {
+  position: absolute;
+  display: block;
+}
+
+#carous .modal-dialog .modal-content .modal-body .next-lightbox, #carous .modal-dialog .modal-content .modal-body .prev-lightbox {
+  position: absolute;
+  top: 45%;
+  right: 25px;
+  padding: 6px 8px 1px 13px;
+  font-size: 25px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  z-index: 1;
+  opacity: 0.4;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#carous .modal-dialog .modal-content .modal-body .next-lightbox:hover {
+  opacity: 1.0;
+  color: #FFF;
 }
 /*# sourceMappingURL=styles2.css.map */
