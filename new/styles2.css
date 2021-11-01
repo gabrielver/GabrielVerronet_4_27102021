@@ -504,10 +504,6 @@ footer .partenaire ul a {
   padding: 0.5rem 1rem;
 }
 
-#carousel:target {
-  display: block;
-}
-
 .carousel {
   position: fixed;
   top: 0;
@@ -519,9 +515,8 @@ footer .partenaire ul a {
 }
 
 .carousel .boite {
-  position: absolute;
-  top: 30%;
-  left: 40%;
+  position: relative;
+  margin: 150px auto;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -531,7 +526,15 @@ footer .partenaire ul a {
   width: 375px;
 }
 
-.carousel label {
+.carousel .boite form {
+  position: relative;
+  width: 340px;
+  overflow: hidden;
+  margin: 1rem;
+  white-space: nowrap;
+}
+
+.carousel .boite form label {
   -webkit-transition: -webkit-transform 400ms ease-out;
   transition: -webkit-transform 400ms ease-out;
   transition: transform 400ms ease-out;
@@ -545,25 +548,12 @@ footer .partenaire ul a {
   line-height: 340px;
 }
 
-.carousel form {
-  position: relative;
-  width: 340px;
-  overflow: hidden;
-  margin: 1rem;
-  white-space: nowrap;
-}
-
-.carousel input {
-  position: absolute;
-  display: none;
-}
-
-.carousel img {
+.carousel .boite form label img {
   width: 340px;
   height: 340px;
 }
 
-.carousel span {
+.carousel .boite form label span {
   position: absolute;
   color: black;
   font-size: 11px;
@@ -574,59 +564,18 @@ footer .partenaire ul a {
   display: flex;
 }
 
-.carousel .close {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 25px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 1px 7px;
-  color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  opacity: 0.3;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  text-decoration: none;
+.carousel .boite form label:before {
+  content: "\276D";
+  right: 105%;
 }
 
-.carousel .close:hover {
-  opacity: 1.0;
-  color: #FFF;
+.carousel .boite form label:after {
+  content: "\276C";
+  left: 105%;
 }
 
-.carousel input:focus ~ .keys {
-  opacity: 0.8;
-}
-
-.carousel input:nth-of-type(1):checked ~ label:nth-of-type(1),
-.carousel input:nth-of-type(2):checked ~ label:nth-of-type(2),
-.carousel input:nth-of-type(3):checked ~ label:nth-of-type(3),
-.carousel input:nth-of-type(4):checked ~ label:nth-of-type(4) {
-  z-index: 0;
-}
-
-.carousel input:nth-of-type(1):checked ~ label {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-
-.carousel input:nth-of-type(2):checked ~ label {
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
-}
-
-.carousel input:nth-of-type(3):checked ~ label {
-  -webkit-transform: translate3d(-202%, 0, 0);
-          transform: translate3d(-202%, 0, 0);
-}
-
-.carousel input:nth-of-type(4):checked ~ label {
-  -webkit-transform: translate3d(-303%, 0, 0);
-          transform: translate3d(-303%, 0, 0);
-}
-
-.carousel label:before,
-.carousel label:after {
+.carousel .boite form label:before,
+.carousel .boite form label:after {
   display: block;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -644,23 +593,73 @@ footer .partenaire ul a {
   transition: all .3s ease-in-out;
 }
 
-.carousel label:before {
-  content: "\276D";
-  right: 105%;
-}
-
-.carousel label:after {
-  content: "\276C";
-  left: 105%;
-}
-
-.carousel label::after:after {
+.carousel .boite form label::after:after {
   content: "x";
   position: absolute;
 }
 
-.carousel label:hover:before, .carousel label:hover:after {
+.carousel .boite form label:hover:before, .carousel .boite form label:hover:after {
   opacity: 1;
   color: white;
+}
+
+.carousel .boite form input {
+  position: absolute;
+  display: none;
+}
+
+.carousel .boite form input:focus ~ .keys {
+  opacity: 0.8;
+}
+
+.carousel .boite form input:nth-of-type(1):checked ~ label:nth-of-type(1),
+.carousel .boite form input:nth-of-type(2):checked ~ label:nth-of-type(2),
+.carousel .boite form input:nth-of-type(3):checked ~ label:nth-of-type(3),
+.carousel .boite form input:nth-of-type(4):checked ~ label:nth-of-type(4) {
+  z-index: 0;
+}
+
+.carousel .boite form input:nth-of-type(1):checked ~ label {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.carousel .boite form input:nth-of-type(2):checked ~ label {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+
+.carousel .boite form input:nth-of-type(3):checked ~ label {
+  -webkit-transform: translate3d(-202%, 0, 0);
+          transform: translate3d(-202%, 0, 0);
+}
+
+.carousel .boite form input:nth-of-type(4):checked ~ label {
+  -webkit-transform: translate3d(-303%, 0, 0);
+          transform: translate3d(-303%, 0, 0);
+}
+
+.carousel .boite form .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1px 7px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  opacity: 0.3;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+}
+
+.carousel .boite form .close:hover {
+  opacity: 1.0;
+  color: #FFF;
+}
+
+#carousel:target {
+  display: block;
 }
 /*# sourceMappingURL=styles2.css.map */

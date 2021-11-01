@@ -426,163 +426,154 @@ footer{
     }
 
 }
-#carousel:target{
-    display: block;
-    
-}
-.carousel{
-   
+
+.carousel{  
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.507);
-
     display: none;
    
-   
-
     .boite{
-        position: absolute;
-        top: 30%;
-        left: 40%;
+        position: relative;
+        margin: 150px auto;
         background-color: #fff;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 6px;
         box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
         height: 400px;
         width: 375px;
-    }
-
-    label {
         
-        transition: transform 400ms ease-out;
-        display: inline-block;
-        width: 340px;
-        height: 360px;
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        line-height: 340px;
+
+        form {
+            position: relative;
+            width: 340px;
+            overflow: hidden;
+            margin: 1rem;
+            white-space: nowrap;
+
+            label {
+        
+                transition: transform 400ms ease-out;
+                display: inline-block;
+                width: 340px;
+                height: 360px;
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                line-height: 340px;
+
+                img{
+                    width: 340px;
+                    height: 340px;
+                }
+                span{
+                    position: absolute;
+                    color: black;
+                    font-size: 11px;
+                    font-weight: 700;
+                    top: 180px;
+                    display: flex;
+                }
+                
+            }
+            label:before {
+                content: "\276D";
+                right: 105%;    
+            }
+        
+            label:after {
+                content: "\276C";
+                left: 105%;
+            }
+               
+            label:before,
+            label:after {
+                display: block;
+                background: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                font-size: 25px;
+                font-weight: bolder;
+                height: 35px;
+                width: 35px;
+                line-height: 2rem;
+                top: 50%;
+                transform: translate3d(0, -50%, 0);
+                cursor: pointer;
+                opacity: 0.3;
+                transition: all .3s ease-in-out;
+            }
+        
+            label::after:after{
+                content: "x";
+                position: absolute;
+            }
+            label:hover:before, label:hover:after{
+                opacity: 1;
+                color: white;
+            }
+                   
+            input {
+                position: absolute;
+                display: none;   
+            }
+            
+            input:focus ~ .keys {
+                opacity: 0.8;
+            }
+        
+            input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+            input:nth-of-type(2):checked ~ label:nth-of-type(2),
+            input:nth-of-type(3):checked ~ label:nth-of-type(3),
+            input:nth-of-type(4):checked ~ label:nth-of-type(4){
+            z-index: 0;
+            }
+        
+            input:nth-of-type(1):checked ~ label {
+                transform: translate3d(0, 0, 0);
+            }
+        
+            input:nth-of-type(2):checked ~ label {
+                transform: translate3d(-100%, 0, 0);
+            }
+        
+            input:nth-of-type(3):checked ~ label {
+                transform: translate3d(-202%, 0, 0);
+            }
+        
+            input:nth-of-type(4):checked ~ label {
+                transform: translate3d(-303%, 0, 0);
+            }
+        
+            .close{
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                font-size: 25px;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 1px 7px;
+                color: rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+                opacity: 0.3;
+                transition: all .3s ease-in-out;
+                text-decoration: none;
+            }
+            .close:hover{
+                opacity: 1.0;
+                color: #FFF;
+            }
+            
+        }
         
     }
 
-    form {
-    position: relative;
-    
-        width: 340px;
-        overflow: hidden;
-        margin: 1rem;
-        white-space: nowrap;
-    
-    }
-    input {
-        position: absolute;
-        display: none;
-        
-    }
-    img{
-        width: 340px;
-        height: 340px;
-    }
-    span{
-        position: absolute;
-        color: black;
-        font-size: 11px;
-        font-weight: 700;
-        top: 180px;
-        display: flex;
-        
-        
-    }
-    .close{
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        font-size: 25px;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 1px 7px;
-        color: rgba(0, 0, 0, 0.5);
-        cursor: pointer;
-        opacity: 0.3;
-        transition: all .3s ease-in-out;
-        text-decoration: none;
-    }
-    .close:hover{
-        opacity: 1.0;
-        color: #FFF;
-    }
-
-    input:focus ~ .keys {
-        opacity: 0.8;
-    }
-
-    input:nth-of-type(1):checked ~ label:nth-of-type(1), 
-    input:nth-of-type(2):checked ~ label:nth-of-type(2),
-    input:nth-of-type(3):checked ~ label:nth-of-type(3),
-    input:nth-of-type(4):checked ~ label:nth-of-type(4){
-    z-index: 0;
-    }
-
-    input:nth-of-type(1):checked ~ label {
-        transform: translate3d(0, 0, 0);
-    }
-
-    input:nth-of-type(2):checked ~ label {
-        transform: translate3d(-100%, 0, 0);
-    }
-
-    input:nth-of-type(3):checked ~ label {
-        transform: translate3d(-202%, 0, 0);
-    }
-
-    input:nth-of-type(4):checked ~ label {
-        transform: translate3d(-303%, 0, 0);
-    }
+   
 
 
+}
 
-
-
-    label:before,
-    label:after {
-        
-        display: block;
-        background: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        font-size: 25px;
-        font-weight: bolder;
-        height: 35px;
-        width: 35px;
-        line-height: 2rem;
-        top: 50%;
-        transform: translate3d(0, -50%, 0);
-        cursor: pointer;
-        opacity: 0.3;
-        transition: all .3s ease-in-out;
-    }
-
-    label:before {
-        content: "\276D";
-        right: 105%;
-        
-        
-    }
-
-    label:after {
-        content: "\276C";
-        left: 105%;
-        
-    }
-    label::after:after{
-        content: "x";
-        position: absolute;
-    }
-    label:hover:before, label:hover:after{
-        opacity: 1;
-        color: white;
-    }
-
-
+#carousel:target{
+    display: block;
 }
