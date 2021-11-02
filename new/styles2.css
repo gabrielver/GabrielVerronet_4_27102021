@@ -30,12 +30,35 @@ nav {
           align-items: center;
 }
 
+nav .burger {
+  display: none;
+}
+
 nav .burger div {
   width: 25px;
   height: 3px;
   background-color: black;
   margin: 5px;
+}
+
+nav .close {
+  position: absolute;
+  color: transparent;
+  top: 5px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+}
+
+nav .show {
   display: none;
+}
+
+nav .show div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
 }
 
 nav ul {
@@ -286,8 +309,6 @@ nav ul li a {
   position: relative;
   color: white;
   background: repeating-linear-gradient(to bottom, white, white 5px, lightgrey 5px, lightgrey 6px);
-  -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
-          box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
 }
 
 .bloc4 h2 {
@@ -347,6 +368,7 @@ nav ul li a {
   margin-top: 1rem;
   text-align: center;
   color: #575757;
+  padding: 0.5rem 0.5rem;
 }
 
 .bloc4 .caroussel .card img {
@@ -435,6 +457,14 @@ nav ul li a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-size: 280px 280px;
+}
+
+.bloc3::before {
+  height: 785px;
+}
+
+.bloc5::before {
+  height: 385px;
 }
 
 footer {
@@ -696,12 +726,6 @@ footer .partenaire ul a {
   nav .nav-main .navbar-brand img {
     width: 85%;
   }
-  nav .nav-main input {
-    position: absolute;
-    top: 15px;
-    right: 26px;
-    display: none;
-  }
   nav .nav-main .burger {
     height: 35px;
     padding-right: 1rem;
@@ -772,6 +796,9 @@ footer .partenaire ul a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .bloc5::before {
+    height: 416px;
   }
   footer .partenaire ul {
     display: -ms-grid;

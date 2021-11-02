@@ -22,13 +22,36 @@
       justify-content: space-between;
       align-items: center;
 
+       .burger{
+          display: none;
+        }
+      
       .burger div{
         width: 25px;
         height: 3px;
         background-color: black;
         margin: 5px;
-        display: none;
+        }
+
         
+        .close{
+            position: absolute;
+            color: transparent;
+            top: 5px;
+            right: 20px;
+            width:35px;
+            height: 35px;
+            
+            
+        }
+
+        .show{
+            display: none;}
+        .show div{
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px;
         }
 
       ul{
@@ -252,7 +275,7 @@
     lightgrey 5px,
     lightgrey 6px
     );
-    box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+    
 
     h2{
         color:  black ;
@@ -292,6 +315,7 @@
                 margin-top: 1rem;
                 text-align: center;
                 color: #575757;
+                padding: 0.5rem 0.5rem;
             }
             img{
                 object-fit: cover;
@@ -375,6 +399,12 @@
     
 }
 
+.bloc3::before{
+    height: 785px;
+}
+.bloc5::before{
+    height: 385px;
+}
 footer{
     position: relative;
     background: #f3976c;
@@ -599,26 +629,20 @@ footer{
           align-items: center;
 
         
-          .navbar-brand{
             
-            img{
-                width: 85%;
+            .navbar-brand{
+            
+                img{
+                    width: 85%;
+                }
+            
+                    
             }
-        }
-            input{
-                position: absolute;
-                top: 15px;
-                right: 26px;
-                display: none;
-                
-            }
-            .burger{
-               height: 35px;
-               padding-right: 1rem;
-               display: block;
-
-               
-            }
+            .burger {
+                height: 35px;
+                padding-right: 1rem;
+                display: block;
+            }    
             
         }
         
@@ -626,8 +650,7 @@ footer{
         .navbar{
         width: 100%;
         display: none;
-
-
+        
             ul{
                 display: flex;
                 flex-direction: column;
@@ -646,8 +669,9 @@ footer{
             
         }
        
-        #show:target {
-            display: block;
+        #show:target{
+         display: block;
+            
         }
         
 
@@ -691,7 +715,9 @@ footer{
             align-items: center;
         }
     }
-
+    .bloc5::before{
+        height: 416px;
+    }
     footer{
       .partenaire{
           ul{
