@@ -83,8 +83,9 @@ nav ul li a {
 .bloc1 {
   position: relative;
   background-size: auto;
-  background-image: url("/img/la-chouette-agence-banniere.jpg");
+  background-image: url("image/la-chouette-agence-banniere.jpg");
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .bloc1 .banner-haut {
@@ -243,8 +244,9 @@ nav ul li a {
 
 .bloc3 {
   background-size: auto;
-  background-image: url("/img/image-de-presentation.bmp");
+  background-image: url("image/1image-de-presentation.jpg");
   background-attachment: fixed;
+  background-size: COVER;
 }
 
 .bloc3 .banner-milieu {
@@ -402,7 +404,7 @@ nav ul li a {
 }
 
 .bloc5 {
-  background-image: url("img/la-chouette-agence-banniere.jpg");
+  background-image: url("image/la-chouette-agence-banniere.jpg");
 }
 
 .bloc5 .banner-bas {
@@ -450,7 +452,7 @@ nav ul li a {
 
 .banner::before {
   content: "";
-  background: url("img/texture-paper.png");
+  background: url("image/texture-paper.png");
   position: absolute;
   width: 100%;
   height: 100%;
