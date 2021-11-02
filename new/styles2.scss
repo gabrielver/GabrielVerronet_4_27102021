@@ -1,0 +1,715 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: et-line;
+    src: url(../fonts/et-line.eot);
+    src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'), url(../fonts/et-line.woff) format('woff'), url(../fonts/et-line.ttf) format('truetype'), url(../fonts/et-line.svg#et-line) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+  
+ body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
+} 
+  nav{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .burger div{
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px;
+        display: none;
+        
+        }
+
+      ul{
+        display: flex;
+        align-items: center;
+        
+        li{
+            margin: 0rem 1rem;
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: black;
+                
+            }
+        }
+        
+      }
+  }
+
+  .bloc1{
+    position: relative;
+    background-size: auto;
+    background-image: url("/img/la-chouette-agence-banniere.jpg");
+    background-attachment: fixed;
+   
+
+
+    .banner-haut{
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .logo{
+            
+            margin: 5rem 1rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+
+            h2{
+                font-size: 40px;
+                font-weight: 400;
+                color: #f3976c;
+                
+                background: #303030a1;
+                border-radius: 2rem;
+                padding: 0.25rem 1rem;
+                
+            }
+
+            a{
+                text-decoration: none;
+                background: #f3976c;
+                color: #303030;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                border-radius: 40px;
+                padding: 12px 28px 12px 28px;
+                box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+                margin-top: 1rem;
+            }
+            a:hover{
+                background: #b36e4e;
+                color: white;
+            }
+        }
+    }
+  }
+ 
+  .bloc2{
+      position: relative;
+      background: white;
+      background-size: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+      box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+
+      h1{
+          margin: 2rem 10rem;
+          text-align: center;
+          font-weight: 400;
+          color: #575757;
+      }
+      .text{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 3rem 1rem;
+
+          .text1{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin: 0rem 1rem;
+
+              .et-icon-presentation,
+              .et-icon-browser,
+              .et-icon-edit
+              {
+                font-family: et-line;
+                font-size: 60px;
+                color: #364577;
+                border-color: #364577;
+               
+              }
+              .et-icon-presentation::before{
+                content: "\e00e";
+                
+              }
+              .et-icon-browser::before{
+                content: "\e00c";
+                
+              }
+              .et-icon-edit::before{
+                content: "\e01c";
+                
+              }
+
+              h2{
+                  font-size: 20px;
+                  margin-top: 1rem;
+              }
+              p{
+                  text-align: center;
+                  margin-top: 1rem;
+                  color: #575757;
+              }
+          }
+          
+      }
+      .review{
+          margin: 2rem 0rem;
+        text-align: center;
+
+        p{
+            font-style: italic;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .ref{
+            font-style: normal;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+      }
+
+      
+
+  }
+
+  .bloc3{
+    background-size: auto;
+    background-image: url("/img/image-de-presentation.bmp");
+    background-attachment: fixed;
+    
+    
+
+    .banner-milieu{
+        padding: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+       .goal{
+        
+        width: 540px;
+        background-color: #85744ccb;
+        padding: 40px 40px 40px 40px;
+
+        h2{
+            position: relative;
+            text-align: center;
+            font-size: 25px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+            color:white ;
+        }
+
+        p{
+            position: relative;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.267);
+            border-radius: 0.5rem;
+            font-weight: 400;
+        }
+        a{
+            position: relative;
+            color: white;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            font-size: 18px;
+            
+        }
+        a:hover{
+            background: #f3976cbd;
+            border-radius: 1rem;
+            color:black;
+        }
+       }
+
+       
+    }
+  }
+
+  .bloc4{
+    position: relative;
+    color: white;
+    background: repeating-linear-gradient(
+    to bottom,
+    white,
+    white 5px,
+    lightgrey 5px,
+    lightgrey 6px
+    );
+    box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+
+    h2{
+        color:  black ;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem;
+        font-size: 25px;
+    }
+
+    .caroussel{
+        
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        padding-bottom: 6rem;
+
+        .card{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           color: black;
+           width: 270px;
+           margin: 1rem;
+           background: white;
+           border-radius: 0.5rem;
+           box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+           
+            h3{
+                font-size: 16px;
+                margin-top: 1rem;
+                text-align: center;
+            }
+            p{
+                margin-top: 1rem;
+                text-align: center;
+                color: #575757;
+            }
+            img{
+                object-fit: cover;
+                height: 270px;
+                width: 270px;
+                border-radius: 0.5rem 0.5rem 0rem 0rem;
+            }
+            i{
+             position: absolute;
+             font-size: 50px;
+             top: 115px;
+             left:115px;
+             color: rgba(0, 0, 0, 0.555);
+             opacity: 0;
+             
+            }
+            a:hover:before{
+                content: "";
+                position: absolute;
+                background: rgba(255, 255, 255, 0.582);
+                width: 270px ;
+                height: 270px;
+                border-radius: 0.5rem 0.5rem 0rem 0rem;
+             
+            }
+            
+            a:hover i{
+                opacity: 1;
+            }
+        }
+    }
+  }
+
+  .bloc5{
+    background-image: url("img/la-chouette-agence-banniere.jpg");
+
+
+    .banner-bas{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 7rem 0rem;
+
+        h2{
+            text-align: center;
+            margin: 1rem;
+            font-size: 30px;
+            font-weight: 400;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+            
+        }
+        a{
+            text-decoration: none;
+                background: #f3976c;
+                color: rgb(51, 51, 51);
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                border-radius: 40px;
+                padding: 12px 28px 12px 28px;
+                box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+                margin-top: 1rem;
+        }
+        a:hover{
+            background: #b36e4e;
+            color: white;
+        }
+    }
+  }
+  
+  .banner::before{
+    content: "";
+    background: url("img/texture-paper.png");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-size: 280px 280px;
+    
+}
+
+footer{
+    position: relative;
+    background: #f3976c;
+    padding-bottom: 3rem;
+   
+
+    h2{
+        text-align: center;
+        padding-top: 1rem;
+        color: #383838;
+        font-weight: 400;
+        font-size: 13px;
+
+    }
+    .resaux {
+        text-align: center;
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+            font-size: 25px;
+            margin-top: 1rem;
+            span{
+                color: rgba(255, 255, 255, 0.603);
+            }
+            span:hover{
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+    .partenaire{
+        text-align: center;
+        margin-top: 1rem;
+
+        P{
+            font-weight: 700;
+            color:#383838;
+            padding-bottom: 2rem;
+        }
+    ul{
+        display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            margin-top: 4rem;
+            margin: 0rem 2rem;
+        
+            a{
+                text-decoration: none;
+                color: #383838;
+                background: rgba(255, 255, 255, 0.39);
+                border-radius: 1rem;
+                padding: 0.5rem 1rem;
+                
+            }
+    }
+    }
+
+}
+
+.carousel{  
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.507);
+    display: none;
+   
+    .boite{
+        position: relative;
+        margin: 150px auto;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+        height: 400px;
+        width: 375px;
+        
+
+        form {
+            position: relative;
+            width: 340px;
+            overflow: hidden;
+            margin: 1rem;
+            white-space: nowrap;
+
+            label {
+        
+                transition: transform 400ms ease-out;
+                display: inline-block;
+                width: 340px;
+                height: 360px;
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                line-height: 340px;
+
+                img{
+                    width: 340px;
+                    height: 340px;
+                }
+                span{
+                    position: absolute;
+                    color: black;
+                    font-size: 11px;
+                    font-weight: 700;
+                    top: 180px;
+                    display: flex;
+                }
+                
+            }
+            label:before {
+                content: "\276D";
+                right: 105%;    
+            }
+        
+            label:after {
+                content: "\276C";
+                left: 105%;
+            }
+               
+            label:before,
+            label:after {
+                display: block;
+                background: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                font-size: 25px;
+                font-weight: bolder;
+                height: 35px;
+                width: 35px;
+                line-height: 2rem;
+                top: 50%;
+                transform: translate3d(0, -50%, 0);
+                cursor: pointer;
+                opacity: 0.3;
+                transition: all .3s ease-in-out;
+            }
+        
+            label::after:after{
+                content: "x";
+                position: absolute;
+            }
+            label:hover:before, label:hover:after{
+                opacity: 1;
+                color: white;
+            }
+                   
+            input {
+                position: absolute;
+                display: none;   
+            }
+            
+            input:focus ~ .keys {
+                opacity: 0.8;
+            }
+        
+            input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+            input:nth-of-type(2):checked ~ label:nth-of-type(2),
+            input:nth-of-type(3):checked ~ label:nth-of-type(3),
+            input:nth-of-type(4):checked ~ label:nth-of-type(4){
+            z-index: 0;
+            }
+        
+            input:nth-of-type(1):checked ~ label {
+                transform: translate3d(0, 0, 0);
+            }
+        
+            input:nth-of-type(2):checked ~ label {
+                transform: translate3d(-100%, 0, 0);
+            }
+        
+            input:nth-of-type(3):checked ~ label {
+                transform: translate3d(-202%, 0, 0);
+            }
+        
+            input:nth-of-type(4):checked ~ label {
+                transform: translate3d(-303%, 0, 0);
+            }
+        
+            .close{
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                font-size: 25px;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 1px 7px;
+                color: rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+                opacity: 0.3;
+                transition: all .3s ease-in-out;
+                text-decoration: none;
+            }
+            .close:hover{
+                opacity: 1.0;
+                color: #FFF;
+            }
+            
+        }
+        
+    }
+
+   
+
+
+}
+
+#carousel:target{
+    display: block;
+}
+
+@media only screen and (max-width: 678px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+
+        .nav-main{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+        
+          .navbar-brand{
+            
+            img{
+                width: 85%;
+            }
+        }
+            input{
+                position: absolute;
+                top: 15px;
+                right: 26px;
+                display: none;
+                
+            }
+            .burger{
+               height: 35px;
+               padding-right: 1rem;
+               display: block;
+
+               
+            }
+            
+        }
+        
+
+        .navbar{
+        width: 100%;
+        display: none;
+
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                background: rgba(211, 211, 211, 0.363);
+                
+                
+                li{
+                    width: 100%;
+                    padding: 0.25rem;
+                    display: flex;
+                    border: solid 0.5px lightgray;
+                    
+                    
+                }
+            }
+            
+        }
+       
+        #show:target {
+            display: block;
+        }
+        
+
+        
+    }
+    .bloc1 .banner-haut .logo h2{
+        font-size: 30px;
+    }
+    
+    .bloc2{
+        h1{
+        margin: 2rem;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+
+            .text1{
+                margin: 1rem;
+            }
+        }
+    }
+
+    .bloc3 .banner-milieu{
+      padding: 1rem;
+        .goal {
+            h2{
+                font-size: 18px;
+            }
+            p{
+                font-size: 16px;
+                padding: 0;
+            }
+        }
+    }
+    .bloc4{
+        .caroussel{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    footer{
+      .partenaire{
+          ul{
+             display: grid;
+             grid-template-columns: 1fr 1fr;
+
+             li{
+                 padding: 1rem 0rem;
+
+                a{
+                    font-size: 15px;
+             }
+              
+                
+                
+            }
+          }
+          
+      }
+    }
+}
