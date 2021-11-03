@@ -703,6 +703,89 @@ footer .partenaire ul a {
   display: block;
 }
 
+/*index page 2*/
+.bloc6 {
+  background-size: auto;
+  background-color: #F3976C;
+  background-image: url(/new/image/dots-bg.png);
+}
+
+.bloc6 .intro {
+  position: relative;
+  text-align: center;
+  padding: 4rem;
+}
+
+.bloc6 .intro h1 {
+  font-size: 45px;
+  padding: 1rem;
+  color: #fff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+.bloc6 .intro p {
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 0 1px 10px black;
+}
+
+.bloc6::before {
+  height: 440px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bloc7 {
+  position: relative;
+  background: white;
+}
+
+.bloc7 .formulaire {
+  text-align: center;
+  padding: 4rem 15rem;
+}
+
+.bloc7 .formulaire .form-group {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bloc7 .formulaire .form-group .form-control {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.bloc7 .formulaire button {
+  background: #F3976C;
+  text-transform: uppercase;
+  padding: 12px 28px 12px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.bloc7 .formulaire button:hover {
+  background: #c27956;
+  color: white;
+}
+
+.bloc7 .contact {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .bloc7 .formulaire {
+    padding: 4rem 8rem;
+  }
+}
+
 @media only screen and (max-width: 678px) {
   nav {
     display: -webkit-box;
@@ -813,6 +896,16 @@ footer .partenaire ul a {
   }
   footer .partenaire ul li a {
     font-size: 15px;
+  }
+  /*index page 2*/
+  .bloc6 .intro {
+    padding: 2rem;
+  }
+  .bloc6::before {
+    height: 515px;
+  }
+  .bloc7 .formulaire {
+    padding: 4rem 2rem;
   }
 }
 /*# sourceMappingURL=styles2.css.map */
