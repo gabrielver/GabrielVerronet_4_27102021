@@ -33,20 +33,20 @@
         margin: 5px;
         }
 
-        
         .close{
             position: absolute;
             color: transparent;
             top: 5px;
             right: 20px;
             width:35px;
-            height: 35px;
-            
-            
+            height: 35px;    
         }
+        
 
         .show{
-            display: none;}
+            display: none;
+            
+        }
         .show div{
             width: 25px;
             height: 3px;
@@ -57,8 +57,10 @@
       ul{
         display: flex;
         align-items: center;
+        padding-right: 3rem;
         
         li{
+            
             margin: 0rem 1rem;
             list-style: none;
 
@@ -731,9 +733,10 @@ footer{
                 display: flex;
                 flex-direction: column;
                 background: rgba(211, 211, 211, 0.363);
-                
+                padding: 0;
                 
                 li{
+                    
                     width: 100%;
                     padding: 0.25rem;
                     display: flex;
