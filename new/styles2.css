@@ -30,12 +30,35 @@ nav {
           align-items: center;
 }
 
+nav .burger {
+  display: none;
+}
+
 nav .burger div {
   width: 25px;
   height: 3px;
   background-color: black;
   margin: 5px;
+}
+
+nav .close {
+  position: absolute;
+  color: transparent;
+  top: 5px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+}
+
+nav .show {
   display: none;
+}
+
+nav .show div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
 }
 
 nav ul {
@@ -45,6 +68,7 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 3rem;
 }
 
 nav ul li {
@@ -60,8 +84,9 @@ nav ul li a {
 .bloc1 {
   position: relative;
   background-size: auto;
-  background-image: url("/img/la-chouette-agence-banniere.jpg");
+  background-image: url("image/la-chouette-agence-banniere.jpg");
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .bloc1 .banner-haut {
@@ -220,8 +245,9 @@ nav ul li a {
 
 .bloc3 {
   background-size: auto;
-  background-image: url("/img/image-de-presentation.bmp");
+  background-image: url("image/1image-de-presentation.jpg");
   background-attachment: fixed;
+  background-size: COVER;
 }
 
 .bloc3 .banner-milieu {
@@ -286,8 +312,6 @@ nav ul li a {
   position: relative;
   color: white;
   background: repeating-linear-gradient(to bottom, white, white 5px, lightgrey 5px, lightgrey 6px);
-  -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
-          box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
 }
 
 .bloc4 h2 {
@@ -347,6 +371,7 @@ nav ul li a {
   margin-top: 1rem;
   text-align: center;
   color: #575757;
+  padding: 0.5rem 0.5rem;
 }
 
 .bloc4 .caroussel .card img {
@@ -380,7 +405,7 @@ nav ul li a {
 }
 
 .bloc5 {
-  background-image: url("img/la-chouette-agence-banniere.jpg");
+  background-image: url("image/la-chouette-agence-banniere.jpg");
 }
 
 .bloc5 .banner-bas {
@@ -428,13 +453,21 @@ nav ul li a {
 
 .banner::before {
   content: "";
-  background: url("img/texture-paper.png");
+  background: url("image/texture-paper.png");
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-size: 280px 280px;
+}
+
+.bloc3::before {
+  height: 785px;
+}
+
+.bloc5::before {
+  height: 385px;
 }
 
 footer {
@@ -671,6 +704,89 @@ footer .partenaire ul a {
   display: block;
 }
 
+/*index page 2*/
+.bloc6 {
+  background-size: auto;
+  background-color: #F3976C;
+  background-image: url(/new/image/dots-bg.png);
+}
+
+.bloc6 .intro {
+  position: relative;
+  text-align: center;
+  padding: 4rem;
+}
+
+.bloc6 .intro h1 {
+  font-size: 45px;
+  padding: 1rem;
+  color: #fff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+.bloc6 .intro p {
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 0 1px 10px black;
+}
+
+.bloc6::before {
+  height: 440px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bloc7 {
+  position: relative;
+  background: white;
+}
+
+.bloc7 .formulaire {
+  text-align: center;
+  padding: 4rem 15rem;
+}
+
+.bloc7 .formulaire .form-group {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bloc7 .formulaire .form-group .form-control {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.bloc7 .formulaire button {
+  background: #F3976C;
+  text-transform: uppercase;
+  padding: 12px 28px 12px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.bloc7 .formulaire button:hover {
+  background: #c27956;
+  color: white;
+}
+
+.bloc7 .contact {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .bloc7 .formulaire {
+    padding: 4rem 8rem;
+  }
+}
+
 @media only screen and (max-width: 678px) {
   nav {
     display: -webkit-box;
@@ -696,12 +812,6 @@ footer .partenaire ul a {
   nav .nav-main .navbar-brand img {
     width: 85%;
   }
-  nav .nav-main input {
-    position: absolute;
-    top: 15px;
-    right: 26px;
-    display: none;
-  }
   nav .nav-main .burger {
     height: 35px;
     padding-right: 1rem;
@@ -720,6 +830,7 @@ footer .partenaire ul a {
         -ms-flex-direction: column;
             flex-direction: column;
     background: rgba(211, 211, 211, 0.363);
+    padding: 0;
   }
   nav .navbar ul li {
     width: 100%;
@@ -773,6 +884,9 @@ footer .partenaire ul a {
         -ms-flex-align: center;
             align-items: center;
   }
+  .bloc5::before {
+    height: 416px;
+  }
   footer .partenaire ul {
     display: -ms-grid;
     display: grid;
@@ -784,6 +898,16 @@ footer .partenaire ul a {
   }
   footer .partenaire ul li a {
     font-size: 15px;
+  }
+  /*index page 2*/
+  .bloc6 .intro {
+    padding: 2rem;
+  }
+  .bloc6::before {
+    height: 515px;
+  }
+  .bloc7 .formulaire {
+    padding: 4rem 2rem;
   }
 }
 /*# sourceMappingURL=styles2.css.map */

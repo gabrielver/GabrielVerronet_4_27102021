@@ -22,20 +22,45 @@
       justify-content: space-between;
       align-items: center;
 
+       .burger{
+          display: none;
+        }
+      
       .burger div{
         width: 25px;
         height: 3px;
         background-color: black;
         margin: 5px;
-        display: none;
+        }
+
+        .close{
+            position: absolute;
+            color: transparent;
+            top: 5px;
+            right: 20px;
+            width:35px;
+            height: 35px;    
+        }
         
+
+        .show{
+            display: none;
+            
+        }
+        .show div{
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px;
         }
 
       ul{
         display: flex;
         align-items: center;
+        padding-right: 3rem;
         
         li{
+            
             margin: 0rem 1rem;
             list-style: none;
 
@@ -52,9 +77,9 @@
   .bloc1{
     position: relative;
     background-size: auto;
-    background-image: url("/img/la-chouette-agence-banniere.jpg");
+    background-image: url("image/la-chouette-agence-banniere.jpg");
     background-attachment: fixed;
-   
+    background-size: cover;
 
 
     .banner-haut{
@@ -186,8 +211,9 @@
 
   .bloc3{
     background-size: auto;
-    background-image: url("/img/image-de-presentation.bmp");
+    background-image: url("image/1image-de-presentation.jpg");
     background-attachment: fixed;
+    background-size: COVER;
     
     
 
@@ -252,7 +278,7 @@
     lightgrey 5px,
     lightgrey 6px
     );
-    box-shadow: inset 0px 0px 17px 3px rgba(0, 0, 0, 0.507);
+    
 
     h2{
         color:  black ;
@@ -292,6 +318,7 @@
                 margin-top: 1rem;
                 text-align: center;
                 color: #575757;
+                padding: 0.5rem 0.5rem;
             }
             img{
                 object-fit: cover;
@@ -326,7 +353,7 @@
   }
 
   .bloc5{
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: url("image/la-chouette-agence-banniere.jpg");
 
 
     .banner-bas{
@@ -366,7 +393,7 @@
   
   .banner::before{
     content: "";
-    background: url("img/texture-paper.png");
+    background: url("image/texture-paper.png");
     position: absolute;
     width: 100%;
     height: 100%;
@@ -375,6 +402,12 @@
     
 }
 
+.bloc3::before{
+    height: 785px;
+}
+.bloc5::before{
+    height: 385px;
+}
 footer{
     position: relative;
     background: #f3976c;
@@ -586,6 +619,81 @@ footer{
 #carousel:target{
     display: block;
 }
+/*index page 2*/
+
+.bloc6{
+    background-size: auto;
+    background-color: #F3976C;
+    background-image: url(/new/image/dots-bg.png);
+
+    .intro{
+        position: relative;
+        text-align: center;
+        padding: 4rem;
+        h1{
+            font-size: 45px;
+            padding: 1rem;
+            color: #fff;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, .8);
+        }
+        p{
+            color: #fff;
+            font-size: 24px;
+            text-shadow: 0 1px 10px rgb(0, 0, 0);
+        }
+    }
+    
+}
+.bloc6::before{
+    height: 440px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bloc7{
+    position: relative;
+    background: white;
+
+    .formulaire{
+        text-align: center;
+        padding: 4rem 15rem;
+
+        .form-group{
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            
+
+            .form-control{
+                border-color: rgba(0, 0, 0, .1);
+               
+            }
+        }
+        button{
+            background: #F3976C ;
+            text-transform: uppercase;
+            padding: 12px 28px 12px 28px;
+            font-size: 16px;
+            font-weight: 700;
+            color: black;
+            transition: all .3s ease-in-out;
+        }
+        button:hover{
+            background: #c27956;
+            color: white;
+        }
+    }
+    .contact{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+@media only screen and (max-width: 1400px){
+    .bloc7{
+        .formulaire{
+           padding: 4rem 8rem;
+        }
+    }
+}
 
 @media only screen and (max-width: 678px) {
     nav{
@@ -599,26 +707,20 @@ footer{
           align-items: center;
 
         
-          .navbar-brand{
             
-            img{
-                width: 85%;
+            .navbar-brand{
+            
+                img{
+                    width: 85%;
+                }
+            
+                    
             }
-        }
-            input{
-                position: absolute;
-                top: 15px;
-                right: 26px;
-                display: none;
-                
-            }
-            .burger{
-               height: 35px;
-               padding-right: 1rem;
-               display: block;
-
-               
-            }
+            .burger {
+                height: 35px;
+                padding-right: 1rem;
+                display: block;
+            }    
             
         }
         
@@ -626,15 +728,15 @@ footer{
         .navbar{
         width: 100%;
         display: none;
-
-
+        
             ul{
                 display: flex;
                 flex-direction: column;
                 background: rgba(211, 211, 211, 0.363);
-                
+                padding: 0;
                 
                 li{
+                    
                     width: 100%;
                     padding: 0.25rem;
                     display: flex;
@@ -646,8 +748,9 @@ footer{
             
         }
        
-        #show:target {
-            display: block;
+        #show:target{
+         display: block;
+            
         }
         
 
@@ -691,7 +794,9 @@ footer{
             align-items: center;
         }
     }
-
+    .bloc5::before{
+        height: 416px;
+    }
     footer{
       .partenaire{
           ul{
@@ -712,4 +817,23 @@ footer{
           
       }
     }
+
+    /*index page 2*/
+    
+    .bloc6{
+        .intro{
+            padding: 2rem;
+        }
+    }
+    .bloc6::before{
+        height: 515px;
+    }
+    .bloc7{
+        .formulaire{
+           padding: 4rem 2rem;
+        }
+    }
+
+    
+    
 }
