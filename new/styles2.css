@@ -11,6 +11,7 @@
   src: url(../fonts/et-line.eot?#iefix) format("embedded-opentype"), url(../fonts/et-line.woff) format("woff"), url(../fonts/et-line.ttf) format("truetype"), url(../fonts/et-line.svg#et-line) format("svg");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -28,6 +29,11 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+nav img {
+  width: 100%;
+  height: 100%;
 }
 
 nav .burger {
@@ -111,6 +117,12 @@ nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.bloc1 .banner-haut .logo img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
 }
 
 .bloc1 .banner-haut .logo h2 {
@@ -382,9 +394,10 @@ nav ul li a {
   border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
-.bloc4 .caroussel .card i {
+.bloc4 .caroussel .card .fa-plus-circle {
   position: absolute;
-  font-size: 50px;
+  width: 50px;
+  height: 50px;
   top: 115px;
   left: 115px;
   color: rgba(0, 0, 0, 0.555);
@@ -400,7 +413,7 @@ nav ul li a {
   border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
-.bloc4 .caroussel .card a:hover i {
+.bloc4 .caroussel .card a:hover svg {
   opacity: 1;
 }
 
@@ -503,11 +516,13 @@ footer .resaux ul {
   margin-top: 1rem;
 }
 
-footer .resaux ul span {
+footer .resaux ul .svg-inline--fa {
   color: rgba(255, 255, 255, 0.603);
+  width: 35px;
+  height: 35px;
 }
 
-footer .resaux ul span:hover {
+footer .resaux ul .svg-inline--fa:hover {
   color: white;
 }
 
@@ -630,8 +645,8 @@ footer .partenaire ul a {
           transform: translate3d(0, -50%, 0);
   cursor: pointer;
   opacity: 0.3;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .carousel .boite form label::after:after {
@@ -639,7 +654,8 @@ footer .partenaire ul a {
   position: absolute;
 }
 
-.carousel .boite form label:hover:before, .carousel .boite form label:hover:after {
+.carousel .boite form label:hover:before,
+.carousel .boite form label:hover:after {
   opacity: 1;
   color: white;
 }
@@ -690,14 +706,14 @@ footer .partenaire ul a {
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   opacity: 0.3;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
 }
 
 .carousel .boite form .close:hover {
-  opacity: 1.0;
-  color: #FFF;
+  opacity: 1;
+  color: #fff;
 }
 
 #carousel:target {
@@ -707,8 +723,8 @@ footer .partenaire ul a {
 /*index page 2*/
 .bloc6 {
   background-size: auto;
-  background-color: #F3976C;
-  background-image: url(/new/image/dots-bg.png);
+  background-color: #f3976c;
+  background-image: url(image/dots-bg.png);
 }
 
 .bloc6 .intro {
@@ -761,14 +777,14 @@ footer .partenaire ul a {
 }
 
 .bloc7 .formulaire button {
-  background: #F3976C;
+  background: #f3976c;
   text-transform: uppercase;
   padding: 12px 28px 12px 28px;
   font-size: 16px;
   font-weight: 700;
   color: black;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .bloc7 .formulaire button:hover {
