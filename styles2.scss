@@ -520,6 +520,7 @@ footer {
       label:after {
         display: block;
         background: rgba(0, 0, 0, 0.5);
+        color: white;
         position: absolute;
         font-size: 25px;
         font-weight: bolder;
@@ -580,9 +581,9 @@ footer {
         top: 5px;
         right: 10px;
         font-size: 25px;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7);
         padding: 1px 7px;
-        color: rgba(0, 0, 0, 0.5);
+        color: white;
         cursor: pointer;
         opacity: 0.3;
         transition: all 0.3s ease-in-out;
@@ -789,6 +790,54 @@ footer {
   .bloc7 {
     .formulaire {
       padding: 4rem 2rem;
+    }
+  }
+  .carousel {
+    
+    .boite {
+      height: 380px;
+      width: 355px;
+  
+      form {
+        width: 330px;
+        overflow: hidden;
+        margin: 1rem;
+        
+  
+        label {
+          
+          width: 335px;
+          height: 360px;
+          right: 10px;
+          
+  
+          img {
+            width: 320px;
+            height: 320px;
+          }
+          span {
+            left: 10px;
+            font-size: 10px;
+            top: 170px;
+            width: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .close{
+          right: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-height: 550px) and (orientation: landscape){
+  .carousel {
+  
+    .boite {
+      margin-top: 0rem;
+     
     }
   }
 }
